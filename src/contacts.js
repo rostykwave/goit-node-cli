@@ -1,7 +1,12 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const contactsPath = path.join("db", "contacts.json");
+// Simulate __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// Construct path to contacts.json in the db folder
+const contactsPath = path.join(__dirname, "db", "contacts.json");
 
 async function listContacts() {
   const data = await fs.readFile(contactsPath, "utf-8");
