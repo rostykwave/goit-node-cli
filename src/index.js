@@ -1,10 +1,10 @@
 import { program } from "commander";
-const {
+import {
   listContacts,
   getContactById,
   removeContact,
   addContact,
-} = require("./contacts");
+} from "./contacts.js";
 
 program
   .option("-a, --action <type>", "choose action")

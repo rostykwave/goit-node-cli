@@ -1,5 +1,5 @@
-const fs = require("fs/promises");
-const path = require("path");
+import { promises as fs } from "fs";
+import path from "path";
 
 const contactsPath = path.join(__dirname, "contacts.json");
 
@@ -31,9 +31,4 @@ async function addContact(name, email, phone) {
   return newContact;
 }
 
-module.exports = {
-  listContacts,
-  getContactById,
-  removeContact,
-  addContact,
-};
+export { listContacts, getContactById, removeContact, addContact };

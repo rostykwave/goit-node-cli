@@ -1,10 +1,11 @@
 {
-  "dependencies": {
-    "commander": "^12.1.0"
-  },
   "name": "goit-node-cli",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
