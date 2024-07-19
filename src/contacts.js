@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 
-const contactsPath = path.join(__dirname, "contacts.json");
+const contactsPath = path.join("db", "contacts.json");
 
 async function listContacts() {
   const data = await fs.readFile(contactsPath, "utf-8");
